@@ -5,9 +5,9 @@ type objecter = {
     bestSubject : string
     
 }
-const Arr1 : any[]= []
-const Arr2 : any = []
-const Arr3 :any  = []
+const Arr1 = []
+const Arr2 = []
+const Arr3 = []
 const Arr4 = []
  
 function objectAccept(object :objecter ){
