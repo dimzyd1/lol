@@ -1,23 +1,28 @@
-type objecter = {
+type levelSortType = {
     name : string
     level : number
     age : number
     bestSubject : string
     
 }
-const Arr1 = []
-const Arr2 = []
-const Arr3 = []
-const Arr4 = []
- 
+const level100 = []
+const level200 = []
+const level300 = []
+const level400 = []
+let returnedArr :levelSortType[]
 function objectAccept(object :objecter ){
 if (object.level === 100){
-    Arr1.push(object)
+    level100.push(object)
+    returnedArr = level100
 }else if(object.level === 200){
-    Arr2.push(object)
+    level200.push(object)
+    returnedArr = level200
 }else if (object.level === 300){
-    Arr3.push(object)
+    level300.push(object)
+    returnedArr = level300
 }else{
-    Arr4.push(object)
+    level400.push(object)
+ returnedArr = level400
 }
+return returnedArr
 }
