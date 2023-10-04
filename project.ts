@@ -11,24 +11,14 @@ let level300 :studentType[] = []
 let level400 :studentType[] = []
 
 
-function addStudentToLevel(students:studentType[] ) :{
-    FIRSTYEAR    : studentType[]
-    SECONDYEAR   : studentType[]
-    THIRDYEAR    : studentType[]
-    FOURTHYEAR   : studentType[]}
-{
-let totalStudentLevel :{
+interface toBereturned {
     FIRSTYEAR    : studentType[]
     SECONDYEAR   : studentType[]
     THIRDYEAR    : studentType[]
     FOURTHYEAR   : studentType[]
 }
-= { 
-    FIRSTYEAR    : level100,
-    SECONDYEAR   : level200,
-    THIRDYEAR    : level300,
-    FOURTHYEAR   : level400
-}
+
+function addStudentToLevel(students:studentType[] ) :toBereturned{
     for (let student of students){
         if (student.level === studentLevel.firstYear){
             level100.push(student)
@@ -42,7 +32,12 @@ let totalStudentLevel :{
             console.log('error level,can\'t add to object')
         } 
     }
-return totalStudentLevel
+return { 
+    FIRSTYEAR    : level100,
+    SECONDYEAR   : level200,
+    THIRDYEAR    : level300,
+    FOURTHYEAR   : level400
+}
 }
 
 

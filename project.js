@@ -4,12 +4,6 @@ let level200 = [];
 let level300 = [];
 let level400 = [];
 function addStudentToLevel(students) {
-    let totalStudentLevel = {
-        FIRSTYEAR: level100,
-        SECONDYEAR: level200,
-        THIRDYEAR: level300,
-        FOURTHYEAR: level400
-    };
     for (let student of students) {
         if (student.level === 100 /* studentLevel.firstYear */) {
             level100.push(student);
@@ -27,7 +21,12 @@ function addStudentToLevel(students) {
             console.log('error level,can\'t add to object');
         }
     }
-    return totalStudentLevel;
+    return {
+        FIRSTYEAR: level100,
+        SECONDYEAR: level200,
+        THIRDYEAR: level300,
+        FOURTHYEAR: level400
+    };
 }
 const studentsInfo = [{
         name: 'Adeleke Tolu',
