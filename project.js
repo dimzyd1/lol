@@ -3,25 +3,25 @@ let level100 = [];
 let level200 = [];
 let level300 = [];
 let level400 = [];
-function addStudentToLevel(arrayOfStudent) {
+function addStudentToLevel(students) {
     let totalStudentLevel = {
         FIRSTYEAR: level100,
         SECONDYEAR: level200,
         THIRDYEAR: level300,
         FOURTHYEAR: level400
     };
-    for (let studentInfo of arrayOfStudent) {
-        if (studentInfo.level === 100 /* studentLevel.firstYear */) {
-            level100.push(studentInfo);
+    for (let student of students) {
+        if (student.level === 100 /* studentLevel.firstYear */) {
+            level100.push(student);
         }
-        else if (studentInfo.level === 200 /* studentLevel.secondYear */) {
-            level200.push(studentInfo);
+        else if (student.level === 200 /* studentLevel.secondYear */) {
+            level200.push(student);
         }
-        else if (studentInfo.level === 300 /* studentLevel.thirdYear */) {
-            level300.push(studentInfo);
+        else if (student.level === 300 /* studentLevel.thirdYear */) {
+            level300.push(student);
         }
-        else if (studentInfo.level === 400 /* studentLevel.fourthYear */) {
-            level400.push(studentInfo);
+        else if (student.level === 400 /* studentLevel.fourthYear */) {
+            level400.push(student);
         }
         else {
             console.log('error level,can\'t add to object');
