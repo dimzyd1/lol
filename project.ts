@@ -10,51 +10,60 @@ let level200 :studentType[] = []
 let level300 :studentType[] = []
 let level400 :studentType[] = []
 
-function addStudentToLevel(object:studentType ){
-if (object.level === 100){
-    level100.push(object)
-    return level100
-}else if(object.level === 200){
-    level200.push(object)
-    return level200
-}else if (object.level === 300){
-    level300.push(object)
-    return level300
-}else if (object.level ===400){
-    level400.push(object)
-    return level400
-}else{
-    return "cant find level"
+
+function addStudentToLevel(arrayOfStudent:studentType[] ){
+let totalStudentLevel :{
+    FIRSTYEAR    : studentType[]
+    SECONDYEAR   : studentType[]
+    THIRDYEAR    : studentType[]
+    FOURTHYEAR   : studentType[]
 }
+= { 
+    FIRSTYEAR    : level100,
+    SECONDYEAR   : level200,
+    THIRDYEAR    : level300,
+    FOURTHYEAR   : level400
+}
+    for (let studentInfo of arrayOfStudent){
+        if (studentInfo.level === studentLevel.firstYear){
+            level100.push(studentInfo)
+        }else if(studentInfo.level === studentLevel.secondYear){
+            level200.push(studentInfo)
+        }else if (studentInfo.level === studentLevel.thirdYear){
+            level300.push(studentInfo)
+        }else if (studentInfo.level ===studentLevel.fourthYear){
+            level400.push(studentInfo)
+        }else{
+            console.log('error level,can\'t add to object')
+        } 
+    }
+return totalStudentLevel
 }
 
 
-const toluInfo : studentType = {
+const studentsInfo =[{
     name : 'Adeleke Tolu',
     level : studentLevel.secondYear,
     age : 20,
     bestSubject : 'Physics'
-}
-const deyemiInfo : studentType= {
+},
+{
     name: 'Adeyemi Dayo',
     level: studentLevel.firstYear,
     age: 20,
     bestSubject: 'PE'
-}
-const SadeInfo :studentType = {
+},
+{
     name: 'Adeleke Sade',
     level:studentLevel.fourthYear,
     age: 21,
     bestSubject: 'Physics'
-};
-const dunsimiInfo :studentType = {
+},
+{
     name: 'Inuoluwadunsimilopolopo',
     level: studentLevel.secondYear,
     age: 20,
     bestSubject: 'Physics'
-};
+}]
 
-console.log(addStudentToLevel(dunsimiInfo));
-console.log(addStudentToLevel(toluInfo));
-console.log(addStudentToLevel(SadeInfo));
-console.log(addStudentToLevel(deyemiInfo));
+console.log(addStudentToLevel(studentsInfo));
