@@ -5,10 +5,10 @@ type studentType = {
     age : number,
     bestSubject? : string 
 }
-let level100 :studentType[] = []
-let level200 :studentType[] = []
-let level300 :studentType[] = []
-let level400 :studentType[] = []
+const level100 :studentType[] = []
+const level200 :studentType[] = []
+const level300 :studentType[] = []
+const level400 :studentType[] = []
 
 
 interface toBereturned {

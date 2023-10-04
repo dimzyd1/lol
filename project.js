@@ -1,8 +1,8 @@
 "use strict";
-let level100 = [];
-let level200 = [];
-let level300 = [];
-let level400 = [];
+const level100 = [];
+const level200 = [];
+const level300 = [];
+const level400 = [];
 function addStudentToLevel(students) {
     for (let student of students) {
         if (student.level === 100 /* studentLevel.firstYear */) {
