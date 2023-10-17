@@ -1,11 +1,11 @@
-project.ts
+1)project.ts
 
 Ts project given by dunsimi :)
 
 
 
-LibraryClass.js
-1. Library
+2)LibraryClass.js
+ Library
 Create a class called  BOOK  whose constructor's parameters are title, author, number of pages, and type of a book (novel, fairy tale, detective, etc.).
 The class also has a method print info, which prints the book's information on the screen in a readable form.
 
